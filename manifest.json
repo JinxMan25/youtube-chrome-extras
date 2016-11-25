@@ -1,0 +1,45 @@
+{
+  "manifest_version": 2,
+  "name": "YouTube Chrome-extras",
+  "version": "1.0.0",
+  "default_locale": "en",
+  "description": "Chrome extension for YouTube that allows you to seek by phrase search or image captions",
+  "browser_action": {
+    "default_popup": "./index.html"
+  },
+
+  "background": {
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "./libs/jquery.min.js",
+        "./dist/content-bundle.js"
+      ],
+      "run_at": "document_end"
+  }],
+  "devtools_page": "devtools.html",
+  "homepage_url": "http://path/to/homepage",
+  "permissions": [
+        "privacy",
+        "activeTab",
+        "storage",
+        "tabs",
+        "http://*/*",
+        "https://*/*"
+  ],
+  "short_namm": "YouTube-Extras",
+  "storage": {
+    "managed_schema": "schema.json"
+  },
+  "update_url": "http://path/to/updateInfo.xml",
+  "version_name": "aString",
+  "web_accessible_resources": [
+    "/assets/*"
+  ]
+}
