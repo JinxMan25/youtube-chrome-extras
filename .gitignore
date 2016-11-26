@@ -1,0 +1,6 @@
+node_modules/*
+*-bundle.js
+.eslintrc.js
+dist/*
+npm-debug.log*
+*.css
