@@ -13,8 +13,8 @@
         "https://*/*"
       ],
       "js": [
-        "./dist/content-bundle.js",
-        "./libs/jquery.min.js"
+        "./libs/jquery.min.js",
+        "./dist/content-bundle.js"
       ],
       "run_at": "document_end"
   }],
